@@ -11,4 +11,7 @@ jobs:
 
     steps:
       - name: Print a message
-        run: echo "hi how are you"
+        run: 
+          -echo "hi how are you"
+          -echo "build done"
+        
