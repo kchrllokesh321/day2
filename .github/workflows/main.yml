@@ -1,4 +1,4 @@
-name: say-hi-pipeline
+name: run-script
 
 on:
   push:
@@ -6,11 +6,11 @@ on:
       - main
 
 jobs:
-  say-hi:
+  run-my-script:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Print a message
-        run: |
-          echo "hi how are you"
-          echo "build done"
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run my script
+        run: bash ./script.sh
