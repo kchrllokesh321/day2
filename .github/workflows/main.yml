@@ -1,0 +1,14 @@
+name: say-hi-pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say-hi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a message
+        run: echo "hi how are you"
